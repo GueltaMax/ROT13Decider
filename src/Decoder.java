@@ -8,11 +8,7 @@ public class Decoder {
 		String codedMessage = "";
 		
 		for (int i = 0; i < message.length(); i++) {
-			for (int j = 0; j < alphabet.length(); j++) {
-				if (message.charAt(i) == alphabet.charAt(j)) {
-					codedMessage = codedMessage + rot13Alphabet.charAt(j);
-				}
-			}
+			codedMessage = codedMessage + rot13Alphabet.charAt(alphabet.indexOf(message.charAt(i)));
 		}
 		return codedMessage;		
 	}
